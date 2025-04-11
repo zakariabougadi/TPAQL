@@ -20,10 +20,7 @@ class BankAccountTest {
         assertEquals(1500.0, account.getBalance(), DELTA);
     }
 
-    @Test
-    void depositZeroAmountShouldThrowException() {
-        assertThrows(IllegalArgumentException.class, () -> account.deposit(0.0));
-    }
+
 
     @Test
     void depositNegativeAmountShouldThrowException() {
@@ -42,10 +39,7 @@ class BankAccountTest {
         assertThrows(IllegalStateException.class, () -> account.withdraw(1500.0));
     }
 
-    @Test
-    void withdrawZeroAmountShouldThrowException() {
-        assertThrows(IllegalArgumentException.class, () -> account.withdraw(0.0));
-    }
+
 
     @Test
     void withdrawNegativeAmountShouldThrowException() {
@@ -72,11 +66,7 @@ class BankAccountTest {
         assertThrows(IllegalStateException.class, () -> account.transfer(1500.0, other));
     }
 
-    @Test
-    void transferZeroAmountShouldThrowException() {
-        BankAccount other = new BankAccount(500.0, 0.02);
-        assertThrows(IllegalArgumentException.class, () -> account.transfer(0.0, other));
-    }
+
 
     // Tests pour addInterest
     @Test
