@@ -12,6 +12,8 @@
         <module>tp0</module>
         <module>tp1</module>
         <module>tp2</module>
+        <module>tp3</module>
+        <module>tp3/Part-2</module>
     </modules>
 
     <properties>
